@@ -1,22 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('comment-form');
+  const usernameInput = document.getElementById('username-input');
   const commentInput = document.getElementById('comment-input');
   const commentsList = document.getElementById('comments-list');
 
   form.addEventListener('submit', (e) => {
-    e.preventDefault(); // Prevent form from refreshing page
+    e.preventDefault();
 
+    const username = usernameInput.value.trim();
     const commentText = commentInput.value.trim();
-    if (commentText === '') return;
+    if (username === '' || commentText === '') return;
+
+    // Create timestamp
+    const now = new Date();
+    const timestamp = now.toLocaleString();
 
     // Create new list item for the comment
     const li = document.createElement('li');
-    li.textContent = commentText;
+    li.innerHTML = `<strong>${username}</strong>: ${commentText}`;
+    li.innerHTML += `<br><small>${timestamp}</small>`;
 
-    // Add comment to the list
     commentsList.appendChild(li);
 
-    // Clear the textarea
+    // Clear the form
+    usernameInput.value = '';
     commentInput.value = '';
   });
 });

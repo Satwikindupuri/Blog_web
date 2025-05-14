@@ -45,3 +45,17 @@ input{
 textarea{
     border:2px solid #ccc;
 }
+
+@media (max-width: 600px) {
+  main {
+    padding: 1em;
+    width: 95%;
+  }
+  header, footer {
+    padding: 0.5em 0;
+  }
+  nav a {
+    display: block;
+    margin: 0.5em 0;
+  }
+}
