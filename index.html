@@ -16,30 +16,45 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <main>
-<article>
-  <h2>Welcome to My Blog!</h2>
-  <p>This is my very first blog post. Stay tuned for more!</p>
-  <small>Published: May 14, 2025</small>
+<main>
+  <!-- First Blog Post -->
+  <article>
+    <h2>Welcome to My Blog!</h2>
+    <p><strong>Category:</strong> General</p>
+    <p>This is my very first blog post. Stay tuned for more!</p>
+    <small>Published: May 14, 2025</small>
+    <!-- Comment Section Start -->
+    <section id="comments-section">
+      <h3>Comments</h3>
+      <form id="comment-form">
+        <label for="username-input">Name:</label><br>
+        <input type="text" id="username-input" required><br>
+        <label for="comment-input">Add a comment:</label><br>
+        <textarea id="comment-input" rows="3" required></textarea><br>
+        <button type="submit">Post Comment</button>
+      </form>
+      <ul id="comments-list"></ul>
+    </section>
+    <!-- Comment Section End -->
+  </article>
 
-  <!-- Comment Section Start -->
-  <section id="comments-section">
-    <h3>Comments</h3>
-<form id="comment-form">
-    <label for="username-input">Name:</label><br>
-    <input type="text" id="username-input" required><br>
-    <label for="comment-input">Add a comment:</label><br>
-    <textarea id="comment-input" rows="3" required></textarea><br>
-    <button type="submit">Post Comment</button>
-</form>
+  <!-- Second Blog Post -->
+  <article>
+    <h2>Travel Tips for Beginners</h2>
+    <p><strong>Category:</strong> Travel</p>
+    <p>Here are some great travel tips for those just starting out. Always pack light and research your destination!</p>
+    <small>Published: May 16, 2025</small>
+  </article>
 
-    <ul id="comments-list"></ul>
-  </section>
-  <!-- Comment Section End -->
-</article>
+  <!-- Third Blog Post -->
+  <article>
+    <h2>How to Stay Motivated When Learning to Code</h2>
+    <p><strong>Category:</strong> Coding</p>
+    <p>Learning to code can be tough. Set small goals, celebrate progress, and join a community for support!</p>
+    <small>Published: May 18, 2025</small>
+  </article>
+</main>
 
-    <!-- More blog posts can go here -->
-  </main>
   <footer>
     <p>&copy; 2025 My Awesome Blog</p>
   </footer>

@@ -59,3 +59,7 @@ textarea{
     margin: 0.5em 0;
   }
 }
+
+article p strong {
+  color: #f38b04;
+}
