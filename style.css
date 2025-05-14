@@ -36,3 +36,12 @@ footer {
   background: #eee;
   margin-top: 2em;
 }
+
+input{
+    border:2px solid #ccc;
+
+}
+
+textarea{
+    border:2px solid #ccc;
+}
