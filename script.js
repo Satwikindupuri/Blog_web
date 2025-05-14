@@ -27,3 +27,24 @@ document.addEventListener('DOMContentLoaded', () => {
     commentInput.value = '';
   });
 });
+
+// Category Filter
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('#category-filter button');
+  const articles = document.querySelectorAll('main article');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.getAttribute('data-category');
+
+      articles.forEach(article => {
+        const postCategory = article.querySelector('p strong').nextSibling.textContent.trim();
+        if (category === 'All' || postCategory === category) {
+          article.style.display = '';
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    });
+  });
+});
